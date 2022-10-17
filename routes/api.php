@@ -23,4 +23,13 @@ Route::group(['prefix' => 'auth'], function () {
     Route::post('/login', 'Api\Auth\AuthController@login');
     Route::post('/logout', 'Api\Auth\AuthController@logout')
         ->middleware('auth:sanctum');
+
+    Route::post('/password/reset', 'Api\Auth\PasswordController@reset')
+    ->middleware('auth:sanctum');
+    Route::post('/password/forgot', 'Api\Auth\PasswordController@sendResetLinkEmail');
 });
+
+// Route::group(['middleware' => 'auth:sanctum'], function () {
+//     Route::post('attendance', 'Api\AttendanceController@store');
+//     Route::get('attendance/history', 'Api\AttendanceController@history');
+// });
