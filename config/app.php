@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+        ConsoleTVs\Charts\ChartsServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -189,7 +190,7 @@ return [
     */
 
     'aliases' => [
-
+        'Charts' => App\Charts\AttendanceChart::class,
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,

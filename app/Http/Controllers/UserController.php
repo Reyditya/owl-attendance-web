@@ -18,8 +18,8 @@ class UserController extends Controller
      */
     public function __construct()
     {
-        // , 'is_admin'
-        $this->middleware(['auth']);
+        
+        $this->middleware(['auth', 'is_admin']);
     }
 
     /**
