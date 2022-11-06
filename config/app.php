@@ -135,6 +135,7 @@ return [
     */
 
     'providers' => [
+        ConsoleTVs\Charts\ChartsServiceProvider::class,
 
         /*
          * Laravel Framework Service Providers...
@@ -165,7 +166,6 @@ return [
         /*
          * Package Service Providers...
          */
-        ConsoleTVs\Charts\ChartsServiceProvider::class,
 
         /*
          * Application Service Providers...
